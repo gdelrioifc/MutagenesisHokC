@@ -1,0 +1,29 @@
+The correlated mutation index is the fraction of correlated mutations that are observed among pairs of residues that are in contact in the 3D structure of proteins.
+
+To compute this index, you have to have installed the JDK (5 or upper) from : 
+
+https://www.java.com/en/download/
+
+Select the appropriate JDK for your operating system. 
+
+Once installed, you need to compile the codes provided in this distribution as follows:
+
+javac doGraphFromPDB.java
+
+javac GetContacts.java
+
+javac AnalyzeCorrMuts.java
+
+Then, execute each of these codes by typing:
+
+java doGraphFromPDB
+
+java GetContacts
+
+java AnalyzeCorrMuts
+
+Each code comes with its own instruction on how to execute them.
+
+If you have any questions, please contact:
+
+gdelrio@ifc.unam.mx
