@@ -148,7 +148,7 @@ public class AnalyzeCorrMuts
     }
    else
     {
-     System.err.println("Uso:\njava AnalyzeCorrMuts <infile> <flag>");
+     System.err.println("Usage:\njava AnalyzeCorrMuts <infile> <flag>");
      System.err.println("<infile> output file from the program GetCorrelatedMutationsAtClosePositions; e.g., 4tsv.getCorrMuts");
      System.err.println("<flag> -fp, -sp or -b, see below.");
      System.err.println("El programa will report the normalized frecuency for each pair of aas in");
