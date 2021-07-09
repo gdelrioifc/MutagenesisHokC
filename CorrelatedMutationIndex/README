@@ -8,6 +8,8 @@ Select the appropriate JDK for your operating system.
 
 Once installed, you need to compile the codes provided in this distribution as follows:
 
+javac GetCorrelatedMutationsAtClosePositions.java
+
 javac doGraphFromPDB.java
 
 javac GetContacts.java
