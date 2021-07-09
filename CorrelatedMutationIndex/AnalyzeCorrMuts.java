@@ -151,7 +151,7 @@ public class AnalyzeCorrMuts
      System.err.println("Usage:\njava AnalyzeCorrMuts <infile> <flag>");
      System.err.println("<infile> output file from the program GetCorrelatedMutationsAtClosePositions; e.g., 4tsv.getCorrMuts");
      System.err.println("<flag> -fp, -sp or -b, see below.");
-     System.err.println("El programa will report the normalized frecuency for each pair of aas in");
+     System.err.println("The program will report the normalized frecuency for each pair of aas in");
      System.err.println("contact (<flag>=-fp), the number of correlated substitutions found by pairs of aas in contact");
      System.err.println("(<flag>=-sp) or both (<flag>=-b).");
      System.err.println("The output will be sent to the standard output.");
