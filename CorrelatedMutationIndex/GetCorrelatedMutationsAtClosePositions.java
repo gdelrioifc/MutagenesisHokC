@@ -50,7 +50,6 @@ public class GetCorrelatedMutationsAtClosePositions
        while(!(line=infile.readLine()).startsWith("## ALIGNMENTS"))
        {
         token=line.substring(8,20).trim();
-//System.err.println(token);
         protsID.add(token);
        }
       }
@@ -58,7 +57,6 @@ public class GetCorrelatedMutationsAtClosePositions
       {
        while((line=infile.readLine()).indexOf("## ALIGNMENTS")==-1)
         {
-//System.err.println(line);
          if(line.startsWith("## SEQUENCE PROFILE AND ENTROPY"))
           {
            break breakable;
@@ -67,15 +65,11 @@ public class GetCorrelatedMutationsAtClosePositions
           {
            pos=line.substring(7,11).trim();
            aa=line.substring(13,15).trim().toUpperCase();
-//System.err.println(aa+":"+pos);
 
-//if(aa.equals("C") && pos.equals("69")) System.err.println(aa+pos+":"+token);
            if(aa.matches("[A-Y]") && !pos.equals(""))
             {
              res=aa+pos;
              token=line.substring(51).toUpperCase();
-//System.err.println(line);
-//System.err.println("Mira="+res+":"+token);
 
              if(!result.containsKey(res)) result.put(res,token);
              else
@@ -127,7 +121,6 @@ public class GetCorrelatedMutationsAtClosePositions
       }
      while(st1.hasMoreElements()) st1.nextElement();
 
-//System.err.println(r1+":"+contacts.toString());
      result.put(r1,contacts);
     }
    infile.close();
@@ -142,7 +135,6 @@ public class GetCorrelatedMutationsAtClosePositions
    int i=0;
    String r2="", aa2="";
 
-//System.err.println("* "+aa1+":"+variants);
    if(variants!=null)
     {
 
@@ -228,7 +220,6 @@ public class GetCorrelatedMutationsAtClosePositions
        aa1=r1.substring(0,1);
        contacts=(LinkedList)residue_contacts.get(r1);
        var1=(String)residue_variance.get(r1);
-//System.err.println("*:"+r1+":"+var1);
        if(var1!=null)
         {
          pos_var1=getVariantPositions(aa1,var1);
@@ -238,7 +229,6 @@ public class GetCorrelatedMutationsAtClosePositions
            r2=(String)contacts.get(i);
            aa2=r2.substring(0,1);
            var2=(String)residue_variance.get(r2);
-//System.err.println(r1+":"+r2+":"+var2);
            if(var2!=null)
             {
              pos_var2=getVariantPositions(aa2,var2);
