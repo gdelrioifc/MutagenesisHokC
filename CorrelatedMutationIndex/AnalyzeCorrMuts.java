@@ -37,9 +37,6 @@ public class AnalyzeCorrMuts
       {
        tokens = line.split("[ \t]");
        par=tokens[0];
-//System.err.println(line);
-//System.err.println(tokens[tokens.length-3]);
-//System.err.println(tokens[tokens.length-1]);
 
        n1=Double.parseDouble(tokens[tokens.length-3]);
        n2=Double.parseDouble(tokens[tokens.length-1]);
@@ -76,7 +73,7 @@ public class AnalyzeCorrMuts
        par=tokens1[0];
        par1=par.substring(0,1);
        par2=par.substring(par.indexOf(":")+1, par.indexOf(":")+2);
-//System.err.println(par+":"+par1+"-"+par2);
+
        token1=tokens1[1];
 
        if(!token1.equals("No correlation found"))
@@ -85,10 +82,8 @@ public class AnalyzeCorrMuts
 
          for(i=0; i<tokens2.length; i++)
           {
-//System.err.println("*"+line);
            s1=tokens2[i].substring(tokens2[i].indexOf("(")+1, tokens2[i].indexOf(":"));
            s2=tokens2[i].substring(tokens2[i].indexOf(":")+1, tokens2[i].indexOf(")"));
-//System.err.println(tokens2[i]+":"+s1+"-"+s2);
 
            token2=par1+"-"+s1+":"+par2+"-"+s2;
            if(!result.containsKey(token2)) result.put(token2,"1");
@@ -153,17 +148,13 @@ public class AnalyzeCorrMuts
     }
    else
     {
-     System.err.println("Gnomovision version 69, Copyright (C) 2016 Gabriel Del Rio");
-     System.err.println("Gnomovision comes with ABSOLUTELY NO WARRANTY."); 
-     System.err.println("Please read the conditions at http://www.gnu.org/licenses/gpl-2.0.html.\n\n");
-
      System.err.println("Uso:\njava AnalyzeCorrMuts <infile> <flag>");
-     System.err.println("<infile> archivo de salida del programa ../HSSP/GetCorrelatedMutationsAtClosePositions; e.g., 4tsv.getCorrMuts");
+     System.err.println("<infile> output file from the program GetCorrelatedMutationsAtClosePositions; e.g., 4tsv.getCorrMuts");
      System.err.println("<flag> -fp, -sp or -b, see below.");
-     System.err.println("El programa reportara la frecuencia normalizada de cada par de aas en");
-     System.err.println("contacto (<flag>=-fp), la del numero de sustituciones correlacionadas encontradas por");
-     System.err.println("par de aa en contacto (<flag>=-sp) o ambas (<flag>=-b).");
-     System.err.println("La salida se hara al standard output.");
+     System.err.println("El programa will report the normalized frecuency for each pair of aas in");
+     System.err.println("contact (<flag>=-fp), the number of correlated substitutions found by pairs of aas in contact");
+     System.err.println("(<flag>=-sp) or both (<flag>=-b).");
+     System.err.println("The output will be sent to the standard output.");
      System.err.println("");
      System.err.println("");
     }
