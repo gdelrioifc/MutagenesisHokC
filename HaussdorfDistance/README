@@ -1,0 +1,37 @@
+The Haussdorff distance measures how far two sets of metric space are from each other.
+
+To compute this distance, you have to have installed the JDK (5 or upper) from : 
+
+https://www.java.com/en/download/
+
+Select the appropriate JDK for your operating system. 
+
+You also need to install the Java Topology Suite distribution, available at:
+
+http://www.vividsolutions.com/jts/JTSHome.htm
+
+Please set your classpath linked to the directories where the jar files of the JTS distribution were installed in your computer; for instance, for LINUX or Mac OS X, type in your terminal the following command:
+
+export CLASSPATH=<path_to_jts_jarfile>:<path_to_jts_jarfile>:<path_to_jts_jarfile>:...:.
+
+Here <path_to_jts_jarfile> refers to the full path where the different jar files from the JTS distribution are located in your computer after installation.
+
+Once installed, you need to compile the codes provided in this distribution as follows:
+
+javac CalcSphCoordPDB.java
+
+javac CalcHaussdorffDistance.java
+
+Then, execute this code by typing:
+
+java CalcSphCoordPDB
+
+java CalcHaussdorffDistance
+
+The codes come with instructions on how to execute them.
+
+The compressed files named spherecoors.tar.gz and haussdorff.tar.gz contains the information reported in the associated publication.
+
+If you have any questions, please contact:
+
+gdelrio@ifc.unam.mx
