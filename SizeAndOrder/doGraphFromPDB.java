@@ -113,8 +113,6 @@ public class doGraphFromPDB {
 						aa = resName.trim() + resSeq.trim();
 					}
 
-// System.err.println(aa+"\t"+serial+"\t"+xS+" "+yS+" "+zS);
-
 					if (!atoms.contains(serial)) {
 						atoms.add(serial);
 					}
@@ -184,10 +182,8 @@ public class doGraphFromPDB {
 				result = true;
 			}
 		} else if (pairs.equalsIgnoreCase("h_complementary")) {
-//			System.err.println(pairs + ":" + aa1 + " " + aa2);
 
 			if (hydrophobs_aa.contains(aa1) && hydrophobs_aa.contains(aa2)) {
-//				System.err.println("got it");
 				result = true;
 			}
 		} else if (pairs.equalsIgnoreCase("ch_complementary")) {
@@ -269,7 +265,6 @@ public class doGraphFromPDB {
 				z1 = coords[2].doubleValue();
 
 				if (!aa1.equals(aa1_old)) {
-//	      System.err.println("CCC");
 					if (neighbors.size() > 0) {
 						for (j = 0; j < neighbors.size(); j++) {
 							outfile.write(aa1_old + "\t" + (String) neighbors.get(j) + "\n");
@@ -292,8 +287,6 @@ public class doGraphFromPDB {
 					yy = Math.pow((y1 - y2), 2.0);
 					zz = Math.pow((z1 - z2), 2.0);
 					distance = Math.sqrt(xx + yy + zz);
-//System.err.println(aa1+"\t"+aa2+"\t"+distance);
-//System.err.println(aa1+" "+aa2);
 					if (!aa1.equalsIgnoreCase(aa2)) {
 						if (distance >= min && distance <= max) {
 							if (!neighbors.contains(aa2)) {
@@ -372,11 +365,9 @@ public class doGraphFromPDB {
 				res2 = (String) st.nextElement();
 
 				if (pairs.equalsIgnoreCase("all")) {
-//					System.out.println(res1 + "\t" + res2);
 					outfile.write(res1 + "\t" + res2 + "\n");
 				} else {
 					aa1 = res1.substring(0, 3);
-// System.err.println(res1+" "++aa1);
 					aa2 = res2.substring(0, 3);
 
 					if (complement(aa1, aa2, pairs)) {
@@ -436,10 +427,6 @@ public class doGraphFromPDB {
 			}
 			System.err.println("Done.");
 		} else {
-     System.err.println("Gnomovision version 69, Copyright (C) 2016 Gabriel Del Rio");
-     System.err.println("Gnomovision comes with ABSOLUTELY NO WARRANTY."); 
-     System.err.println("Please read the conditions at http://www.gnu.org/licenses/gpl-2.0.html.\n\n");
-
 			System.err.println("Usage:\njava doGraphFromPDB <pdb> <chain> <min> <max> <pairs> <distance_criterium> <output_filename>");
 			System.err.println("<pdb> pdb file name");
 			System.err.println("<chain> chain name in <pdb> to be used to trace the graph. If no chain is defined");
