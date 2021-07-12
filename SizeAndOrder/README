@@ -8,11 +8,15 @@ Select the appropriate JDK for your operating system.
 
 Once installed, you need to compile the codes provided in this distribution as follows:
 
+javac doGraphFromPDB.java
+
 javac calcSizeOrderGraph.java
 
 javac GetAllSizeOrder.java
 
 Then, execute each of these codes by typing:
+
+java doGraphFromPDB
 
 java calcSizeOrderGraph
 
