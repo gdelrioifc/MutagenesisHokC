@@ -59,12 +59,8 @@ public class calcSizeOrderGraph
     }
    else
     {
-     System.err.println("Gnomovision version 69, Copyright (C) 2016 Gabriel Del Rio");
-     System.err.println("Gnomovision comes with ABSOLUTELY NO WARRANTY."); 
-     System.err.println("Please read the conditions at http://www.gnu.org/licenses/gpl-2.0.html.\n\n");
-
      System.err.println("Usage:\njava calcSizeOrderGraph <file>");
-     System.err.println("<file> file with two columns tab-delimited, the graph.");
+     System.err.println("<file> file with two columns tab-delimited, the graph, obtained from the program doGraphFromPDB.");
      System.err.println("The program will count the number of unique vertices and edges.");
      System.err.println("The output will be sent to the standard output.");
      System.err.println("");
