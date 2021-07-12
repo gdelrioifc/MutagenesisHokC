@@ -67,12 +67,8 @@ public class GetAllSizeOrder
     }
    else
     {
-     System.err.println("Gnomovision version 69, Copyright (C) 2016 Gabriel Del Rio");
-     System.err.println("Gnomovision comes with ABSOLUTELY NO WARRANTY."); 
-     System.err.println("Please read the conditions at http://www.gnu.org/licenses/gpl-2.0.html.\n\n");
-
      System.err.println("Usage:\njava GetAllSizeOrder <infile>");
-     System.err.println("<infile> a file with a list of file names obtained with the program calcSizeOrderGraph; e.g., globular_sizeOrder5_withoutMemProts.list");
+     System.err.println("<infile> a file with a list of file names obtained with the program calcSizeOrderGraph.");
      System.err.println("The program will print to the standard out the pdb-chain, size and order reported for all the files in <infiel>.");
      System.err.println("");
      System.err.println("");
