@@ -26,6 +26,8 @@ java AnalyzeCorrMuts
 
 Each code comes with its own instruction on how to execute them.
 
+The compressed file named cmi.tar.gz contains the correlated mutation indexes reported in the associated publication.
+
 If you have any questions, please contact:
 
 gdelrio@ifc.unam.mx
