@@ -1,7 +1,7 @@
 # MutagenesisHokC
 Codes developed to compute different structural features of transmembrane and globular proteins
 
-This site contains codes developed for the work reported at the publication entitled: "Structural basis for the increased tolerance to mutations of HokC in Escherichia coli".
+This site contains codes developed for the work reported at the publication entitled: "Saturation Mutagenesis of the Transmembrane Region of HokC in Escherichia coli Reveals Its High Tolerance to Mutations" by Maria Teresa Lara Ortiz, Victor Martinell Garcia and Gabriel Del Rio.
 
 All these codes were developed in java v 5 or above, so it is necessary to have installed in your computer the SDK available at https://www.java.com/en/download/. Please choose the appropriate SDK for your operating system.
 
